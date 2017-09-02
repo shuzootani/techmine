@@ -7,6 +7,12 @@
   height: 80px;
 }
 
+.appTitle{
+  font-size: 50px;
+  font-family: "Hiragino Sans";
+  font-weight: 100;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -31,8 +37,7 @@ input {
   display: block;
   border: none;
   padding: 10px;
-  border-bottom: solid 3px $color;
-  color: $color;
+  border-bottom: solid 2px #999;
   font-size: 18px;
   &:focus, &:valid {
     outline: none;

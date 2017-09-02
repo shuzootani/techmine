@@ -5,6 +5,11 @@
   animation: App-logo-spin infinite 20s linear;
   height: 80px; }
 
+.appTitle {
+  font-size: 50px;
+  font-family: "Hiragino Sans";
+  font-weight: 100; }
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -26,8 +31,7 @@ input {
   display: block;
   border: none;
   padding: 10px;
-  border-bottom: solid 3px #072044;
-  color: #072044;
+  border-bottom: solid 2px #999;
   font-size: 18px; }
   input:focus, input:valid {
     outline: none;
