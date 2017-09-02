@@ -1,0 +1,69 @@
+.App {
+  text-align: center; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+input {
+  margin: 40px auto;
+  width: 400px;
+  display: block;
+  border: none;
+  padding: 10px;
+  border-bottom: solid 3px #072044;
+  color: #072044;
+  font-size: 18px; }
+  input:focus, input:valid {
+    outline: none;
+    box-shadow: none; }
+
+.CardList {
+  display: grid;
+  width: 80%;
+  margin: 20px auto;
+  justify-content: center;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, 100%); }
+  .CardList .EventCard {
+    display: grid;
+    grid-template-rows: auto 50px;
+    grid-template-columns: 160px 1fr;
+    text-align: left;
+    padding: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    margin: 8px;
+    transition: all ease-out .1s; }
+    .CardList .EventCard:hover {
+      transform: scale(1.02); }
+    .CardList .EventCard .date {
+      grid-row: 1 / 3;
+      grid-column: 1 / 2; }
+    .CardList .EventCard .header {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3; }
+    .CardList .EventCard .footer {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      padding-top: 16px; }
+      .CardList .EventCard .footer .tag {
+        margin-right: 8px;
+        color: #fff;
+        background: #072044;
+        padding: 10px;
+        border-radius: 6px; }
