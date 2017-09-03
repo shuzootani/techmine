@@ -3,7 +3,7 @@ import {formatDate} from '../utils/dateFormat'
 
 const EventCard = (props) => {
 
-    const {event_url, place, address, title, started_at, limit, hash_tag} = props
+    const {event_url, address, title, started_at, hash_tag} = props
 
     return (
         <a className='EventCard' href={event_url} target='_blank'>        

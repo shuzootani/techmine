@@ -1,13 +1,13 @@
-import {OperationHelper} from 'apac'
+// import {OperationHelper} from 'apac' Amazon APIを叩くためのnpmモジュール
 import req from 'superagent'
 import jsonp from 'superagent-jsonp'
 
-const opHelper = new OperationHelper({
-    awsId:     '[AKIAIRX37PT3VTNCLM7A]',
-    awsSecret: '[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]',
-    assocId:   '[trunkamazonse-22]',
-    locale: 'JP'
-})
+// const opHelper = new OperationHelper({
+//     awsId:     '[AKIAIRX37PT3VTNCLM7A]',
+//     awsSecret: '[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]',
+//     assocId:   '[trunkamazonse-22]',
+//     locale: 'JP'
+// })
 
 export const searchBooks = (keyword) => {
     return (dispatch) => {
