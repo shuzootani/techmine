@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBoxContainer from './containers/SearchBoxContainer'
 import SearchResultContainer from './containers/SearchResultContainer'
+import TabContainer from './containers/TabContainer'
 import logo from './images/techmine.png'
 
 // import parser from 'ogp-parser' Pocketみたいなスクリーンスクレイピングしたい。
@@ -20,6 +21,7 @@ class App extends Component {
           TECH <img src={logo} width='35' height='35' alt='tech mine'/> MINE
         </h1>
         <SearchBoxContainer/>
+        <TabContainer/>
         <SearchResultContainer/>
       </div>
     );

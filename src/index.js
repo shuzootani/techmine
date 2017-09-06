@@ -9,8 +9,10 @@ import {rootReducer} from './reducers'
 import thunk from 'redux-thunk'
 import {searchEvents} from './actions/event'
 import {Router, Route, browserHistory} from 'react-router';
+import promiseMiddleware from 'redux-promise';
 
 let store = createStore(rootReducer, applyMiddleware(thunk))
+//let store = createStore(rootReducer, applyMiddleware(promiseMiddleware))
 
 store.dispatch(searchEvents('ruby'))
 

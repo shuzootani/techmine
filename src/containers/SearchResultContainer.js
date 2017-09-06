@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
     console.log(state)
     return {
         events: state.event.events,
-        articles: state.article.articles
+        articles: state.article.articles,
+        visible: state.filter.visible
     }
 }
 
