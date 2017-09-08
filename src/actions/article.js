@@ -1,4 +1,4 @@
-import req from 'superagent'
+// import req from 'superagent'
 // import jsonp from 'superagent-jsonp' no necessita por Qiita api
 
 // superagent

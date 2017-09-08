@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {searchEvents} from '../actions/event'
 import {searchArticles} from '../actions/article'
 import {searchFeeds} from '../actions/feed'
-import {searchSlides} from '../actions/slide'
+// import {searchSlides} from '../actions/slide'
 // import {searchBooks} from '../actions/book'
 
 export const SearchBoxContainer = () => {

@@ -7,9 +7,7 @@ const FeedCard = (props) => {
     const {title, link, pubDate, category} = props
 
     const renderLabel = () => {
-        return (
-            <span className='label label--feed'>{labelForUrl(link)}</span>          
-        )
+        return <span className='label label--feed'>{labelForUrl(link)}</span>
     }
 
     const renderDate = () => {
@@ -24,7 +22,7 @@ const FeedCard = (props) => {
         return (
             <section className='footer'>
                 {category.slice(0,5).map((tag, i) => {
-                    if (tag) return <span key={i} className='tag'>{tag}</span>
+                    return <span key={i} className='tag'>{tag}</span>
                 })}
             </section>
         )

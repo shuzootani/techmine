@@ -1,4 +1,4 @@
-import {filterFeeds} from '../utils/filter'
+// import {filterFeeds} from '../utils/filter'
 
 // YQL
 export const fetchFeeds = (keyword) => {
@@ -14,24 +14,24 @@ export const fetchFeeds = (keyword) => {
         })
         .catch(err => {console.log(err)})
 
-        // // -------------- POSTD ----------------------------
-        // const q4postd = "select * from rss where url ='http://postd.cc/feed/'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4postd + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let postd = json.query.results.item
-        //     dispatch(successFetchFeeds(postd))
-        // })
-        // .catch(err => {console.log(err)})           
+        // -------------- POSTD ----------------------------
+        const q4postd = "select * from rss where url ='http://postd.cc/feed/'"
+        fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4postd + "&format=json")
+        .then(res => res.json())
+        .then(json => {
+            let postd = json.query.results.item
+            dispatch(successFetchFeeds(postd))
+        })
+        .catch(err => {console.log(err)})           
 
-        // // -------------- JSer ----------------------------
-        // const q4jser = "select * from rss where url ='https://jser.info/rss/'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4jser + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let jser = json.query.results.item    
-        //     dispatch(successFetchFeeds(jser))
-        // })
+        // -------------- JSer ----------------------------
+        const q4jser = "select * from rss where url ='https://jser.info/rss/'"
+        fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4jser + "&format=json")
+        .then(res => res.json())
+        .then(json => {
+            let jser = json.query.results.item    
+            dispatch(successFetchFeeds(jser))
+        })
 
         // // -------------- sitepoint ----------------------------
         // const q4sitepoint = "select * from rss where url ='https://www.sitepoint.com/feed/'"
