@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
     return {
         events: state.event.events,
         articles: state.article.articles,
+        feeds: state.feed.feeds,
         visible: state.filter.visible
     }
 }

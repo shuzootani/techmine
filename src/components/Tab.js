@@ -3,7 +3,7 @@ import React from 'react'
 const Tab = ({tab_name, onSelected, visible}) => {
 
     const tabSelected = () => {
-        return tab_name === visible
+        return tab_name === visible || (tab_name === 'ALL' && visible === '')
     }
     
     return (

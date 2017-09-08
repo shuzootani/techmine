@@ -3,6 +3,8 @@ import SearchBox from '../components/SearchBox'
 import {connect} from 'react-redux'
 import {searchEvents} from '../actions/event'
 import {searchArticles} from '../actions/article'
+import {searchFeeds} from '../actions/feed'
+import {searchSlides} from '../actions/slide'
 // import {searchBooks} from '../actions/book'
 
 export const SearchBoxContainer = () => {
@@ -14,6 +16,8 @@ const mapDispatchToProps = (dispatch) => {
         searchRequeted: (keyword) => {
             dispatch(searchEvents(keyword))
             dispatch(searchArticles(keyword))
+            dispatch(searchFeeds(keyword))
+            // dispatch(searchSlides(keyword))
             // dispatch(searchBooks(keyword))
         }
     }

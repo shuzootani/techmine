@@ -30,18 +30,25 @@
                 padding: 8px;
                 color: #fff;
                 border-radius: 2px;
+                letter-spacing: 2px;
                 &--connpass{background: #D23017}
                 &--qiita{background: #79B74A}
+                &--feed{
+                    border: 1px solid;
+                    color: black;
+                    font-weight: bold;
+                }
             }
         }
         .footer {
             grid-row: 2 / 3;
             grid-column: 2 / 3;
-            padding: 8px 0px;
+            padding: 8px 0px 0px;
             .tag{
+                font-size: 10px;
                 margin-right: 8px;
                 color: #fff;
-                background: #999;
+                background: #38515A;
                 padding: 10px;
                 border-radius: 2px;
             }

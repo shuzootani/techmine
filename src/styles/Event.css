@@ -86,18 +86,24 @@ input {
       .CardList .EventCard .header .label {
         padding: 8px;
         color: #fff;
-        border-radius: 2px; }
+        border-radius: 2px;
+        letter-spacing: 2px; }
         .CardList .EventCard .header .label--connpass {
           background: #D23017; }
         .CardList .EventCard .header .label--qiita {
           background: #79B74A; }
+        .CardList .EventCard .header .label--feed {
+          border: 1px solid;
+          color: black;
+          font-weight: bold; }
     .CardList .EventCard .footer {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
-      padding: 8px 0px; }
+      padding: 8px 0px 0px; }
       .CardList .EventCard .footer .tag {
+        font-size: 10px;
         margin-right: 8px;
         color: #fff;
-        background: #999;
+        background: #38515A;
         padding: 10px;
         border-radius: 2px; }

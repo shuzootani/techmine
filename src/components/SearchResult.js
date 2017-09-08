@@ -1,37 +1,43 @@
 import React from 'react'
 import EventCard from './EventCard'
 import ArticleCard from './ArticleCard'
+import FeedCard from './FeedCard'
 import '../styles/Event.css'
 
-const SearchResult = ({events, articles, visible}) => {
+const SearchResult = ({events, articles, feeds, visible}) => {
 
     const renderArticles = () => {
-        return articles.map((article,i) => {
-            return <ArticleCard key={i} {...article} />
+        return articles.map((article) => {
+            return <ArticleCard key={article.url} {...article} />
         })
     }
 
     const renderEvents = () => {
-        return events.map((event,i) => {
-            return <EventCard key={i} {...event} />
+        return events.map((event) => {
+            return <EventCard key={event.event_url} {...event} />
+        })
+    }
+
+    const renderFeeds = () => {
+        return feeds.map((item) => {
+            return <FeedCard key={item.link} {...item} />
         })
     }
 
     const renderAll = () => {
-        return renderEvents()
+        return [...renderArticles(), ...renderEvents(), ...renderFeeds()]
     }
 
     const renderResources = () => {
         switch (visible) {
             case 'ARTICLE':
                 return renderArticles()
-                break
             case 'EVENT':
                 return renderEvents()
-                break
+            case 'FEED':
+                return renderFeeds()
             default:
                 return renderAll()
-                break
         }
     }
 

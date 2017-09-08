@@ -7,14 +7,18 @@ import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from 'redux'
 import {rootReducer} from './reducers'
 import thunk from 'redux-thunk'
+import {fetchFeeds} from './actions/fetch'
 import {searchEvents} from './actions/event'
+import {searchArticles} from './actions/article'
 import {Router, Route, browserHistory} from 'react-router';
 import promiseMiddleware from 'redux-promise';
 
 let store = createStore(rootReducer, applyMiddleware(thunk))
 //let store = createStore(rootReducer, applyMiddleware(promiseMiddleware))
 
-store.dispatch(searchEvents('ruby'))
+store.dispatch(searchEvents('react'))
+store.dispatch(searchArticles('react'))
+store.dispatch(fetchFeeds('react'))
 
 ReactDOM.render(
     <Provider store={store}>
