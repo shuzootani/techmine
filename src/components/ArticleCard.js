@@ -15,12 +15,10 @@ const ArticleCard = (props) => {
 
     return (
         <a className='EventCard' href={url} target='_blank'>
-            <section className='date'>
-                {formatDate(new Date(updated_at), 'YYYY年MM月DD日')}
-            </section>
             <section className='header'>
                 <span className='label label--qiita'>Qiita</span><span>　いいね数 {likes_count}</span>
                 <h3>{title}</h3>
+                <span>{formatDate(new Date(updated_at), 'YYYY年MM月DD日')}</span>
             </section>
             <section className='footer'>
                 {tags ? renderTags() : null}

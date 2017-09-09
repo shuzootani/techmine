@@ -5,7 +5,7 @@ import {filterByTab} from '../actions/filter'
 
 const TabContainer = (props) => {
 
-    let tabList = [{tab_name: 'ALL'}, {tab_name: 'ARTICLE'}, {tab_name: 'EVENT'}, {tab_name: 'FEED'}]
+    let tabList = [{tab_name: 'ALL'}, {tab_name: 'ARTICLE'}, {tab_name: 'EVENT'}, {tab_name: 'VIDEO'}, {tab_name: 'FEED'}]
     return (
         <div className='tabContainer'>
             <ul className='tabs'>

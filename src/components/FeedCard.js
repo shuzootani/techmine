@@ -30,10 +30,10 @@ const FeedCard = (props) => {
 
     return (
         <a className='EventCard' href={link} target='_blank'>
-            {pubDate ? renderDate() : null}
             <section className='header'>
                 {link ? renderLabel() : null}
                 <h3>{title}</h3>
+                {pubDate ? renderDate() : null}
             </section>
             {category ? renderTags() : null}
         </a>

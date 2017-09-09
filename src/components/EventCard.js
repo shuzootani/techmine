@@ -15,12 +15,10 @@ const EventCard = (props) => {
 
     return (
         <a className='EventCard' href={event_url} target='_blank'>        
-            <section className='date'>
-                {formatDate(new Date(started_at), 'YYYY年MM月DD日')}                
-            </section>
             <section className='header'>
                 <span className='label label--connpass'>connpass</span>
                 <h3>{title}</h3>
+                <p>{formatDate(new Date(started_at), 'YYYY年MM月DD日')}</p>
                 <span>{address}</span>
             </section>
             <section className='footer'>

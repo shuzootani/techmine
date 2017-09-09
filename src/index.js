@@ -9,6 +9,7 @@ import {rootReducer} from './reducers'
 import thunk from 'redux-thunk'
 import {fetchFeeds} from './actions/fetch'
 import {searchEvents} from './actions/event'
+import {searchVideos} from './actions/video'
 import {searchArticles} from './actions/article'
 import {Router, Route, browserHistory} from 'react-router';
 import promiseMiddleware from 'redux-promise';
@@ -18,6 +19,7 @@ let store = createStore(rootReducer, applyMiddleware(thunk))
 
 store.dispatch(searchEvents('react'))
 store.dispatch(searchArticles('react'))
+store.dispatch(searchVideos('react'))
 store.dispatch(fetchFeeds('react'))
 
 ReactDOM.render(

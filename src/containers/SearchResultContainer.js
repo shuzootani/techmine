@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
         events: state.event.events,
         articles: state.article.articles,
         feeds: state.feed.feeds,
+        videos: state.video.videos,
         visible: state.filter.visible
     }
 }
