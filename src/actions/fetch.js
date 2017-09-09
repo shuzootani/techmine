@@ -1,4 +1,4 @@
-// import {filterFeeds} from '../utils/filter'
+import {filterFeeds} from '../utils/filter'
 
 // YQL
 export const fetchFeeds = (keyword) => {
@@ -10,7 +10,7 @@ export const fetchFeeds = (keyword) => {
         .then(res => res.json())
         .then(json => {
             let hatena = json.query.results.item
-            dispatch(successFetchFeeds(hatena))
+            dispatch(successFetchFeeds(filterFeeds(hatena, keyword)))
         })
         .catch(err => {console.log(err)})
 
@@ -20,7 +20,7 @@ export const fetchFeeds = (keyword) => {
         .then(res => res.json())
         .then(json => {
             let postd = json.query.results.item
-            dispatch(successFetchFeeds(postd))
+            dispatch(successFetchFeeds(filterFeeds(postd, keyword)))
         })
         .catch(err => {console.log(err)})           
 
@@ -30,28 +30,28 @@ export const fetchFeeds = (keyword) => {
         .then(res => res.json())
         .then(json => {
             let jser = json.query.results.item    
-            dispatch(successFetchFeeds(jser))
+            dispatch(successFetchFeeds(filterFeeds(jser, keyword)))
         })
 
-        // // -------------- sitepoint ----------------------------
-        // const q4sitepoint = "select * from rss where url ='https://www.sitepoint.com/feed/'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4sitepoint + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let sitepoint = json.query.results.item
-        //     dispatch(successFetchFeeds(sitepoint))    
-        // })
-        // .catch(err => {console.log(err)})
+        // -------------- sitepoint ----------------------------
+        const q4sitepoint = "select * from rss where url ='https://www.sitepoint.com/feed/'"
+        fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4sitepoint + "&format=json")
+        .then(res => res.json())
+        .then(json => {
+            let sitepoint = json.query.results.item
+            dispatch(successFetchFeeds(filterFeeds(sitepoint, keyword)))    
+        })
+        .catch(err => {console.log(err)})
 
-        // // -------------- EchoJS ----------------------------        
-        // const q4echojs = "select * from rss where url ='http://www.echojs.com/rss'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4echojs + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let echojs = json.query.results.item
-        //     dispatch(successFetchFeeds(echojs))
-        // })
-        // .catch(err => {console.log(err)})
+        // -------------- EchoJS ----------------------------        
+        const q4echojs = "select * from rss where url ='http://www.echojs.com/rss'"
+        fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4echojs + "&format=json")
+        .then(res => res.json())
+        .then(json => {
+            let echojs = json.query.results.item
+            dispatch(successFetchFeeds(filterFeeds(echojs, keyword)))
+        })
+        .catch(err => {console.log(err)})
 
         // // -------------- eureka ----------------------------
         // const q4eureka = "select * from rss where url ='https://developers.eure.jp/feed/'"
@@ -62,16 +62,16 @@ export const fetchFeeds = (keyword) => {
         //     dispatch(successFetchFeeds(eureka))            
         // })
 
-        // // -------------- TOPTAL ----------------------------
-        // .catch(err => {console.log(err)})
-        // const query = "select * from rss where url ='https://www.toptal.com/developers/blog.rss'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let toptal = json.query.results.item
-        //     dispatch(successFetchFeeds(toptal))
-        // })
-        // .catch(err => {console.log(err)})
+        // -------------- TOPTAL ----------------------------
+        .catch(err => {console.log(err)})
+        const query = "select * from rss where url ='https://www.toptal.com/developers/blog.rss'"
+        fetch("https://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json")
+        .then(res => res.json())
+        .then(json => {
+            let toptal = json.query.results.item
+            dispatch(successFetchFeeds(filterFeeds(toptal, keyword)))
+        })
+        .catch(err => {console.log(err)})
     }
 }
 

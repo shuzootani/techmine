@@ -1,3 +1,4 @@
 export const filterFeeds = (feeds, keyword) => {
-    return feeds.filter(feed => feed.title.search(keyword) >= 0)
+    let result = feeds.filter(feed => feed.title.search(keyword) >= 0)
+    return result
 }

@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {searchEvents} from '../actions/event'
 import {searchArticles} from '../actions/article'
 import {searchFeeds} from '../actions/feed'
+import {fetchFeeds} from '../actions/fetch'
 import {searchVideos} from '../actions/video'
 // import {searchSlides} from '../actions/slide'
 // import {searchBooks} from '../actions/book'
@@ -17,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
         searchRequeted: (keyword) => {
             dispatch(searchEvents(keyword))
             dispatch(searchArticles(keyword))
-            dispatch(searchFeeds(keyword))
+            dispatch(fetchFeeds(keyword))
             dispatch(searchVideos(keyword))            
             // dispatch(searchSlides(keyword))
             // dispatch(searchBooks(keyword))
