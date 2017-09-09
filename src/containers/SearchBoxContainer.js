@@ -7,7 +7,7 @@ import {searchFeeds} from '../actions/feed'
 import {fetchFeeds} from '../actions/fetch'
 import {searchVideos} from '../actions/video'
 // import {searchSlides} from '../actions/slide'
-// import {searchBooks} from '../actions/book'
+import {searchBooks} from '../actions/book'
 
 export const SearchBoxContainer = () => {
     return <div><SearchBox/></div>
