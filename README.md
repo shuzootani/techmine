@@ -1,4 +1,4 @@
 # Run App
-### `$ git clone repo`
+### `$ git clone https://github.com/shuzootani/techmine.git`
 ### `$ npm install`
 ### `$ yarn start`
