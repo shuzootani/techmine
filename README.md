@@ -1,3 +1,6 @@
+demo sample
+https://shuzootani.github.io/techmine/
+
 # Techmine
 techmineはWeb開発者が技術を学習するための勉強会、記事、動画チュートリアルなどの学習ソースを検索するシンプルなサービスです。
 
