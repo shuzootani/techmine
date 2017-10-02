@@ -20,7 +20,7 @@ const SearchBox = ({searchRequeted}) => {
         }
     }
 
-    return <input placeholder='Search ...' onKeyDown={handleEnter}/>
+    return <input placeholder='React, Rails, ElasticSearch...' onKeyDown={handleEnter}/>
 }
 
 export default SearchBox
