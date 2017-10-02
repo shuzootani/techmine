@@ -1,18 +1,3 @@
-// import req from 'superagent'
-// import jsonp from 'superagent-jsonp' no necessita por Qiita api
-
-// superagent
-// export const searchArticles = (keyword) => {
-//     return (dispatch) => {
-//         req.get('https://qiita.com/api/v2/items?page=1&per_page=20&query=' + keyword).end((err,data) => {
-//             if (!err && data) {
-//                 dispatch(successFetchArticles(data.body))
-//             }
-//         })
-//     }
-// }
-
-
 // fetchAPI
 export const searchArticles = (keyword) => {
     return (dispatch) => {

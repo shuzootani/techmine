@@ -18,8 +18,8 @@ const mapDispatchToProps = (dispatch) => {
         searchRequeted: (keyword) => {
             dispatch(searchEvents(keyword))
             dispatch(searchArticles(keyword))
-            dispatch(fetchFeeds(keyword))
-            dispatch(searchVideos(keyword))            
+            dispatch(searchVideos(keyword))
+            dispatch(fetchFeeds(keyword))          
             // dispatch(searchSlides(keyword))
             // dispatch(searchBooks(keyword))
         }

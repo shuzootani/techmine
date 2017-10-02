@@ -17,11 +17,6 @@ import promiseMiddleware from 'redux-promise';
 let store = createStore(rootReducer, applyMiddleware(thunk))
 //let store = createStore(rootReducer, applyMiddleware(promiseMiddleware))
 
-store.dispatch(searchEvents('react'))
-store.dispatch(searchArticles('react'))
-store.dispatch(searchVideos('react'))
-store.dispatch(fetchFeeds('react'))
-
 ReactDOM.render(
     <Provider store={store}>
         <App/>

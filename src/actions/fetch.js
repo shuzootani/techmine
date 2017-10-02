@@ -53,17 +53,7 @@ export const fetchFeeds = (keyword) => {
         })
         .catch(err => {console.log(err)})
 
-        // // -------------- eureka ----------------------------
-        // const q4eureka = "select * from rss where url ='https://developers.eure.jp/feed/'"
-        // fetch("https://query.yahooapis.com/v1/public/yql?q=" + q4eureka + "&format=json")
-        // .then(res => res.json())
-        // .then(json => {
-        //     let eureka = json.query.results.item
-        //     dispatch(successFetchFeeds(eureka))            
-        // })
-
         // -------------- TOPTAL ----------------------------
-        .catch(err => {console.log(err)})
         const query = "select * from rss where url ='https://www.toptal.com/developers/blog.rss'"
         fetch("https://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json")
         .then(res => res.json())
@@ -72,6 +62,13 @@ export const fetchFeeds = (keyword) => {
             dispatch(successFetchFeeds(filterFeeds(toptal, keyword)))
         })
         .catch(err => {console.log(err)})
+    }
+}
+
+export const successFetchFeeds = (result) => {
+    return {
+        type: 'SUCCESS_FETCH_FEEDS',
+        feeds: result
     }
 }
 
@@ -145,12 +142,5 @@ export const fetchEchoJS = () => {
             console.log(json)
         })
         .catch(err => {console.log(err)})
-    }
-}
-
-export const successFetchFeeds = (result) => {
-    return {
-        type: 'SUCCESS_FETCH_FEEDS',
-        feeds: result
     }
 }
