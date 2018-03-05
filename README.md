@@ -1,4 +1,4 @@
-demo sample
+## Demo
 https://shuzootani.github.io/techmine/
 
 # Techmine
