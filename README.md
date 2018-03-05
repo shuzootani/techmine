@@ -15,5 +15,5 @@ techmineはWeb開発者が技術を学習するための勉強会、記事、動
 # Try App
 ### `$ git clone https://github.com/shuzootani/techmine.git`
 ### `$ cd ./techmine`
-### `$ npm install`
+### `$ yarn`
 ### `$ yarn start`
